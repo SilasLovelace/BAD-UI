@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;600;900&display=swap');
+
+@keyframes vibrate {
+    0% {
+        transform: translateX(0px)
+    }
+
+    25% {
+        transform: translateX(3px)
+    }
+
+    50% {
+        transform: translateX(0px)
+    }
+
+    75% {
+        transform: translateX(-3px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+@keyframes appear {
+    0% {
+        height: 80px;
+        width: 100px
+    }
+
+    50% {
+        height: 40px;
+        width: 20px
+    }
+
+    75% {
+        height: 40px;
+        width: 40px
+    }
+
+    100% {
+        height: 15px;
+        width: 15px
+    }
+}
+
+.vibrate {
+    animation-name: vibrate;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.green{
+    border: 4px solid rgba(59, 235, 0, 0.661) !important;
+    background-color: rgba(64, 255, 1, 0.243) !important;
+    
+}
+
+#letter{
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+* {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+h2 {
+    display: block;
+}
+
+#formbody {
+    height: 450px;
+}
+
+#commfield {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-top: 30px !important;
+    font-size: 30px !important;
+}
+
+#healthbar {
+    background-color: rgba(19, 95, 0, 0.753);
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#healthbackground {
+    background-color: rgba(95, 95, 95, 0.753);
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.healthbarcontainer {
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#health {
+    color: white;
+    font-weight: 600;
+    position: fixed;
+    top: 7px;
+    left: 48%;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.modalimage {
+    max-height: 100px;
+    max-width: 100px;
+
+}
+
+.hitcontainer {
+    position: fixed;
+}
+
+body {
+    margin: 0
+}
+
+html {
+    margin: 0
+}
+
+
+.shot {
+    display: flex;
+    position: fixed;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(123, 123, 123);
+    font-size: xx-small;
+}
+
+.lorem{
+    width: 20vw;
+}
+
+#gamestuff {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+#gunstuff {
+    display: flex;
+    justify-content: center;
+}
+
+#ammostuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+}
+
+
+#infos {
+    display: flex;
+    align-items: center;
+}
+
+#reload {
+    font-weight: bold;
+}
+
+#resize {
+    font-weight: bold;
+}
+
+#credentials {
+    min-width: 300px;
+}
+
+#infoammo {}
+
+#gun {
+    position: fixed;
+    height: 20%;
+    cursor: grab;
+}
+
+.gamearea {
+    width: 100%;
+    height: 100%;
+}
+
+.targetarea {
+
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+.shootarea {
+
+    width: 50%;
+    height: 100vh;
+    position: relative
+}
+
+#target {
+    position: absolute;
+    background-color: rgb(4, 255, 255);
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+
+.invisible {
+    display: none;
+}
+
+.attractor {
+    animation-name: appear;
+    animation-duration: 800ms;
+    position: fixed;
+    border-radius: 50%;
+    background-color: black;
+    height: 15px;
+    width: 15px;
+}
+
+.nocursor {
+    cursor: none !important;
+}
