@@ -72,6 +72,11 @@ let velocityShot = 25
 let cursorX = 0
 let cursorY = 0
 
+// Sound initiallizers
+let reloadSound = new Audio(`Sounds/reload.wav`)
+let bellSound = new Audio(`Sounds/bell.mp3`)
+let blipSound = new Audio(`Sounds/blip.wav`)
+
 resetTarget()
 function resetTarget() {
     targetAreaDiv.style = `top: ${window.innerHeight / 2 - targetAreaDiv.offsetHeight / 2}px; left: ${window.innerWidth / 2 - targetAreaDiv.offsetWidth / 2}px;`
@@ -85,19 +90,16 @@ function playShot() {
 }
 
 function playreload() {
-    let reloadSound = new Audio(`Sounds/reload.wav`)
     reloadSound.currentTime = 0
     reloadSound.play()
 }
 
 function playbell() {
-    let bellSound = new Audio(`Sounds/bell.mp3`)
     bellSound.currentTime = 0
     bellSound.play()
 }
 
 function playblip() {
-    let blipSound = new Audio(`Sounds/blip.wav`)
     blipSound.currentTime = 0
     blipSound.play()
 }
