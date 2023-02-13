@@ -23,8 +23,6 @@ let emptyDiv = document.querySelector('.emptyclip')
 let emailinfo = document.getElementById('email')
 let passwordinfo = document.getElementById('password')
 
-
-
 // toggles and conditionals for events
 let gameon = true
 let finalbattle = false
@@ -323,7 +321,7 @@ function shooter(element, currentY, currentX, currentAngle, starttime) {
                     signhit(target)
                     updateHealth()
                     element.remove()
-                    if (health > 0){ health -= damage }
+                    if (health > 0) { health -= damage }
                     if (health % 10 === 0) {
                         playblip()
                         createAttractor()
@@ -556,6 +554,9 @@ function levelchangeEvent() {
     document.querySelectorAll('.shot').forEach(e => e.remove())
     gamestuffDiv.classList.add('invisible')
     gunDiv.classList.add('invisible')
+    // newline
+    gameAreaDiv.classList.add('nocursor')
+
     ammo = []
     updateAmmo()
     gunToggle = false
@@ -585,6 +586,9 @@ function levelchangeEvent() {
                 canreload = true
                 newAmmo()
                 playreload()
+                // newline
+                  gameAreaDiv.classList.remove('nocursor')
+
             }, 2000)
         }
     }, 3000)
@@ -597,6 +601,7 @@ function endbossEvent() {
     gunDiv.classList.add('invisible')
     reloadButton.classList.add('invisible')
     emptyDiv.classList.add('invisible')
+    gameAreaDiv.classList.add('nocursor')
     ammo = []
     updateAmmo()
     canshoot = false
@@ -636,6 +641,7 @@ function endbossEvent() {
             jump = targetJumper(targetAreaDiv)
             gunstuff.classList.remove('invisible')
             healthbarcontDiv.classList.remove('invisible')
+            gameAreaDiv.classList.remove('nocursor')
             canshoot = true
             playbell()
             alert('Guntoggle disabled!')
@@ -649,6 +655,7 @@ function endbossEvent() {
 
 function lastEvent() {
     gamestuffDiv.classList.add('invisible')
+    gameAreaDiv.classList.add('nocursor')
     finalbattle = true
     gunToggle = false
     canshoot = false
@@ -691,6 +698,7 @@ function lastEvent() {
 
             signInButton.classList.remove('vibrate')
             gamestuffDiv.classList.remove('invisible')
+            gameAreaDiv.classList.remove('nocursor')
             jump = targetJumper(targetAreaDiv)
             canshoot = true
             hitable = true
@@ -708,6 +716,7 @@ function lastEvent() {
 function loseEvent() {
     gamestuffDiv.classList.add('invisible')
     healthbarcontDiv.classList.add('invisible')
+    gameAreaDiv.classList.add('nocursor')
     document.querySelectorAll('.shot').forEach(e => e.remove())
     document.querySelectorAll('.attractor').forEach(e => e.remove())
     clearInterval(jump)
@@ -737,6 +746,7 @@ function loseEvent() {
 function ending() {
     gamestuffDiv.classList.add('invisible')
     healthbarcontDiv.classList.add('invisible')
+    gameAreaDiv.classList.add('nocursor')
     document.querySelectorAll('.shot').forEach(e => e.remove())
     document.querySelectorAll('.attractor').forEach(e => e.remove())
     clearInterval(jump)
@@ -768,6 +778,7 @@ function ending() {
             }
             if (line === lines.length) {
                 clearInterval(speech)
+                gameAreaDiv.classList.remove('nocursor')
                 endingclear = true
                 emailInput.value = emailString
                 passwordInput.value = pwString
