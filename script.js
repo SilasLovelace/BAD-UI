@@ -74,6 +74,7 @@ let cursorY = 0
 let reloadSound = new Audio(`Sounds/reload.wav`)
 let bellSound = new Audio(`Sounds/bell.mp3`)
 let blipSound = new Audio(`Sounds/blip.wav`)
+let typeSound = new Audio(`Sounds/typing.mp3`)
 
 resetTarget()
 function resetTarget() {
@@ -111,7 +112,6 @@ function playcharge() {
 
 function playtype() {
     typeSound.pause()
-    let typeSound = new Audio(`Sounds/typing.wav`)
     typeSound.currentTime = 0
     typeSound.play()
     return typeSound
@@ -119,6 +119,9 @@ function playtype() {
 
 // types  text of  a string into the inner HTML of element 1000/intervall times per second
 function typetext(element, text, intervall) {
+
+    playtype()
+
     array = text.split('')
     let typeTime = setInterval(function () {
         if (array.length > 0) element.innerHTML += array.shift()
