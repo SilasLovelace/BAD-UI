@@ -284,6 +284,6 @@ html {
     width: 15px;
 }
 
-.nocursor {
+.nocursor, .nocursor * {
     cursor: none !important;
 }
