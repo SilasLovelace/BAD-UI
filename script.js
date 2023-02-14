@@ -342,7 +342,7 @@ function shooter(element, currentY, currentX, currentAngle, starttime) {
 
         if ((momentaryPosX < 15 || momentaryPosX > window.innerWidth - 15) || (momentaryPosY < 15 || momentaryPosY > window.innerHeight - 15)) {
             clearInterval(shootTime)
-            if (canlose && endbossmode && ammo.length === 0) { loseEvent() }
+            if (canlose && endbossmode && ammo.length === 0) { canlose=false; loseEvent() }
         }
     }, 5)
 

@@ -185,12 +185,14 @@ html {
     display: flex;
     position: fixed;
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
+    height: 30px;
+    width: 30px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(123, 123, 123);
-    font-size: xx-small;
+    background-color: rgba(83,83,83,0.22) ;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 600;
 }
 
 .lorem{
